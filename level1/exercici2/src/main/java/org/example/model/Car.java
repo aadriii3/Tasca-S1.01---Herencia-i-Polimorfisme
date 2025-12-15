@@ -27,11 +27,12 @@ public class Car {
     }
 
     public static void brake() {
-        System.out.println("El vehicle " + Car.BRAND + " " + Car.getModel() + " està frenant.");
+        System.out.println("El vehicle " + Car.getBrand() + " " + Car.getModel() + " està frenant.");
+
     }
 
     public void accelerate(){
-        System.out.println("El vehicle " + Car.BRAND + " " + Car.getModel() + " està accelerant");
+        System.out.println("El vehicle " + Car.getBrand() + " " + Car.getModel() + " està accelerant");
     }
 }
 
