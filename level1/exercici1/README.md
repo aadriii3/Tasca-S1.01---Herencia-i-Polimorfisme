@@ -1,4 +1,4 @@
-# Tasca S1.01 - Herencia i Polimorfisme
+# Tasca S1.01 - Herencia i Polimorfisme - Nivell 1 - Exercici 1
 
 **Descripció**: Exercicis de la tasca 1 on es practica les classes i métodes abstractes, a més de, les càrregues de classes i els blocs estàtics (variable static, bloc estàtic, bloc d'inicialització i métode estatic)
 

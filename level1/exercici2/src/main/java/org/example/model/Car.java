@@ -25,5 +25,13 @@ public class Car {
     public int getPower() {
         return power;
     }
+
+    public static void brake() {
+        System.out.println("El vehicle " + Car.BRAND + " " + Car.getModel() + " està frenant.");
+    }
+
+    public void accelerate(){
+        System.out.println("El vehicle " + Car.BRAND + " " + Car.getModel() + " està accelerant");
+    }
 }
 
