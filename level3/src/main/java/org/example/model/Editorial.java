@@ -6,11 +6,17 @@ import java.util.Scanner;
 
 public class Editorial {
 
+    private List<Editor> editorsList;
+    private Scanner sc;
+
+    public Editorial() {
+        this.editorsList = new ArrayList<>();
+        this.sc = new Scanner(System.in);
+    }
+
     public void initEditorial(){
-        Scanner sc = new Scanner(System.in);
         int menuOption = 0;
 
-        List<Editor> editorsList = new ArrayList<>();
         do {
             System.out.println("Introdueixi una opcio del menu: ");
             System.out.println("1. Introduir redactor\n2. Eliminar redactor\n3. Introduir noticia a un redactor\n4. Eliminar noticia\n5. Mostrar totes les noticies d'un redactor\n6. Calcular puntuacio d'una noticia\n7. Calcular preu d'una noticia\n8. Mostrar tots els redactors\n9. Sortir");
@@ -18,10 +24,10 @@ public class Editorial {
 
             switch (menuOption){
                 case 1:
-                    addEditor(sc,editorsList);
+                    addEditor();
                     break;
                 case 2:
-                    deleteEditor(sc,editorsList);
+                    deleteEditor();
                     break;
                 case 3:
                     break;
@@ -51,7 +57,7 @@ public class Editorial {
         System.out.println("Sortida amb exit");
     }
 
-    private void addEditor(Scanner sc, List<Editor> editorsList){
+    private void addEditor(){
         sc.nextLine();
         System.out.println("Introudeix el DNI del redactor:");
         String dniEditor = sc.nextLine();
@@ -63,7 +69,7 @@ public class Editorial {
         System.out.println("Redactor afegit");
     }
 
-    private void deleteEditor(Scanner sc, List<Editor> editorsList){
+    private void deleteEditor(){
         sc.nextLine();
         System.out.println("Introdueixi el DNI del redactor que vols eliminar: ");
         String deleteEditorDni = sc.nextLine();
@@ -84,6 +90,34 @@ public class Editorial {
             System.out.println("Redactor eliminado");
         }else{
             System.out.println("Redactor no encontrado");
+        }
+    }
+
+    public void addNewsEditor(){
+        sc.nextLine();
+        System.out.println("Introdueixi el DNI del redactor que vols afegir-li una noticia: ");
+        String dniToAddNews = sc.nextLine();
+        System.out.println("Introdueixi el nom del redactor que vols afegir-li una noticia: ");
+        String nameToAddNews = sc.nextLine();
+
+        Editor newsEditor = null;
+
+        for (Editor e : editorsList) {
+            if(e.getDni().equalsIgnoreCase(dniToAddNews) && e.getName().equalsIgnoreCase(nameToAddNews)) {
+                newsEditor = e;
+                break;
+            }
+        }
+
+        if(newsEditor != null){
+            String title;
+            String text;
+
+            System.out.println("Afegeix un titol a la noticia:");
+            title = sc.nextLine();
+            System.out.println("Afegeix un text a la noticia:");
+            text = sc.nextLine();
+
         }
     }
 
