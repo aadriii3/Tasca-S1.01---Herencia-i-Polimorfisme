@@ -8,5 +8,8 @@ public class Main {
         Editorial editorial = new Editorial();
         editorial.initEditorial();
 
+        /*Falta el menu en Editorial donde va todo el flujo del programa, esta programado
+        * el 1 y el 2, el 3 a medias. Faltan los demás*/
+
     }
 }

@@ -112,11 +112,21 @@ public class Editorial {
         if(newsEditor != null){
             String title;
             String text;
+            int opcionNews;
 
             System.out.println("Afegeix un titol a la noticia:");
             title = sc.nextLine();
             System.out.println("Afegeix un text a la noticia:");
             text = sc.nextLine();
+
+            System.out.println("De quin tipus es la noticia?");
+            System.out.println("1.Football News\n2.Basketball News\n3.Tennis News\n4. F1 News\n5. Motorcycling News");
+            opcionNews = sc.nextInt();
+
+            switch (opcionNews) {
+                case 1:
+
+            }
 
         }
     }
