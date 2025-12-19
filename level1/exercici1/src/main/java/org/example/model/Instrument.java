@@ -18,29 +18,19 @@ public abstract class Instrument {
         System.out.println("Este metodo pertenece a la " + Instrument.info);
     }
 
-    /*Constructor*/
     public Instrument(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    /*Metodo abstracto*/
     public abstract void play();
 
-    /*Getters y Setters*/
+
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 }
