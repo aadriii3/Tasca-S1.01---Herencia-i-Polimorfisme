@@ -5,8 +5,6 @@ import org.example.model.Car;
 public class Main {
     public static void main(String[] args) {
 
-        Car.brake();
-
         Car car = new Car(200);
         Car car2 = new Car(300);
 
